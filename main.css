@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.container {
+  max-width: 900px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+}
+
+.main .main__wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main__wrapper .main__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  border-radius: 1rem;
+  background-color: #fff;
+  width: 100%;
+  height: 508px;
+  background-image: url(img/illustration-woman-online-desktop.svg), url(img/bg-pattern-desktop.svg);
+  background-position: -110px center,-260px center;
+  background-repeat: no-repeat;
+  background-size: 530px 400px,690px 750px;
+}
+
+.main .main__wrapper .main__card .box__decor {
+  position: absolute;
+  top: 50%;
+  margin-top: -85px;
+  left: -13%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.main .main__wrapper .main__card .box__decor:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.main .main__wrapper .main__card .faq {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .main__wrapper .main__card .faq h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1d1e35;
+  margin: 50px 0px;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .list__item {
+  position: relative;
+  cursor: pointer;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 18px 0 14px;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .list__item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .list__item div .item__question {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .list__item div img {
+  margin-left: 10px;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .list__item div:hover .item__question {
+  color: #f47c57;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .list__item img {
+  display: block;
+  height: 8px;
+  width: 12px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .popup-text {
+  color: #505050;
+  font-size: 13px;
+  height: 0;
+  line-height: 1.5;
+  top: 50px;
+  opacity: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .dropdown .popup-text {
+  opacity: 1;
+  height: 20px;
+  padding: 15px 0;
+}
+
+.main .main__wrapper .main__card .faq .faq__list .dropdown div > img {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main .main__wrapper .main__card .faq .faq__list .dropdown .item__question {
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  body {
+    height: 160vh;
+  }
+  .main .main__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 140px;
+  }
+  .main .main__wrapper .main__card {
+    width: 90%;
+    background-image: none;
+    height: 560px;
+    position: relative;
+  }
+  .main .main__wrapper .main__card .main__card-mobile {
+    display: block !important;
+  }
+  .main .main__wrapper .main__card .main__card-mobile img {
+    position: absolute;
+    display: block;
+    left: 48.5%;
+  }
+  .main .main__wrapper .main__card .main__card-mobile img:first-of-type {
+    z-index: 10;
+    top: -20%;
+    margin-left: -133px;
+    width: 266px;
+    height: 196px;
+  }
+  .main .main__wrapper .main__card .main__card-mobile img:last-of-type {
+    top: -1%;
+    margin-left: -107px;
+    width: 240px;
+    height: 104px;
+  }
+  .main .main__wrapper .main__card .faq {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+  .main .main__wrapper .main__card .faq h1 {
+    text-align: center;
+  }
+  .main .main__wrapper .main__card .faq .faq__list {
+    width: auto;
+  }
+  .main .main__wrapper .main__card .faq .faq__list .list__item {
+    width: auto;
+  }
+  .main .main__wrapper .main__card .box__decor {
+    display: none;
+  }
+}
+
+@media (max-width: 586px) {
+  .main .main__wrapper .main__card {
+    width: 100%;
+    height: 510px;
+  }
+  .main .main__wrapper .main__card .main__card-mobile img {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  .main .main__wrapper .main__card .main__card-mobile img:last-of-type {
+    top: -2%;
+    margin-left: -109px;
+  }
+  .main .main__wrapper .main__card .faq h1 {
+    margin: 30px 0;
+  }
+  .main .main__wrapper .main__card .faq .faq__list .list__item {
+    font-size: 0.8rem;
+  }
+  .main .main__wrapper .main__card .faq .faq__list .list__item .popup-text {
+    font-size: 0.6rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

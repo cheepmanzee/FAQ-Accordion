@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import 'nullstyle.scss';
+
+
+$blackColor: hsl(238, 29%, 16%);
+$orangeColor:hsl(14, 88%, 65%);
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.container {
+    max-width: 900px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    .main__wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main__card {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            border-radius: 1rem;
+            background-color: #fff;
+            width: 100%;
+            height: 508px;
+            background-image:url(img/illustration-woman-online-desktop.svg),url(img/bg-pattern-desktop.svg);
+            background-position:-110px center,-260px center;
+            background-repeat: no-repeat;
+            background-size:530px 400px,690px 750px;
+            .box__decor {
+                position: absolute;
+                top: 50%;
+                margin-top: -85px;
+                left: -13%;
+                height: fit-content;
+                transition: 0.6s ease-in-out;
+                &:hover {
+                    transform: translateY(-20px);
+                }
+            }
+            .faq {
+                width: 45%;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;              
+                h1 {
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                    color: $blackColor;
+                    margin:50px 0px;
+                }
+                .faq__list {
+                    .list__item {
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .item__question {
+                                transition: 0.3s ease;
+                            }
+                            img {
+                                margin-left: 10px;
+                            }
+                            &:hover .item__question{
+                                color: $orangeColor;
+                            }
+                        }
+                        position: relative;
+                        cursor: pointer;
+                        width: 80%;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #ddd;
+                        padding: 18px 0 14px;
+                        img {
+                            display: block;
+                            height: 8px;
+                            width: 12px;
+                            transition: 0.3s ease;
+                        }
+                    }
+                    .popup-text {
+                        color: rgb(80, 80, 80);
+                        font-size: 13px;
+                        // position: absolute;
+                        height: 0;
+                        line-height: 1.5;
+                        top: 50px;
+                        opacity: 0;
+                        transition: 0.4s ease-in-out;
+                    }
+                    .dropdown .popup-text {
+                        opacity: 1;
+                        height: 20px;
+                        padding: 15px 0;
+                    }   
+                    .dropdown div > img {
+                        transition: 0.4s ease;
+                        transform: rotate(180deg);
+                    }
+                    .dropdown .item__question {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    body {
+        height: 160vh;
+    }
+    .main {
+        .main__wrapper {  
+            align-items: flex-start;
+            margin-top: 140px;
+            .main__card {
+                width: 90%;
+                background-image: none;
+                height: 560px;
+                position: relative;
+                .main__card-mobile {
+                    display: block !important;
+                    img {
+                        position: absolute;
+                        display: block;
+                        left: 48.5%;
+                        &:first-of-type {
+                            z-index: 10;
+                            top: -20%;
+                            margin-left: -133px;
+                            width: 266px;
+                            height: 196px;
+                        }
+                        &:last-of-type {
+                            top: -1%;
+                            margin-left: -107px;
+                            width: 240px;
+                            height: 104px;
+                        }
+                    }
+                }
+                .faq {
+                    display: block;
+                    margin: 0 auto;
+                    width: 85%;
+                    margin-top: 60px;
+                    margin-bottom: 100px;
+                    h1 {
+                        text-align: center;
+                    }
+                    .faq__list {
+                        width: auto;
+                        .list__item {
+                            width: auto;
+                        }
+                    }
+                }
+                .box__decor {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 586px) {
+    
+    .main {
+        .main__wrapper { 
+            .main__card {
+                width: 100%;
+                height: 510px;
+                .main__card-mobile {
+                    img {
+                    transform: scale(0.9);
+                    transform-origin:center center;
+                    &:last-of-type {
+                        top: -2%;
+                        margin-left: -109px;
+                    }
+                    }
+                }
+                .faq {
+                    h1 {
+                        margin: 30px 0;
+                    }
+                    .faq__list {
+                        .list__item {
+                            font-size: 0.8rem;
+                            .popup-text {
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
